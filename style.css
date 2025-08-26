@@ -1,0 +1,112 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header, nav, footer {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+/* Navigation using Flexbox */
+nav .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main layout using CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Content section */
+.content {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Card layout using Flexbox */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #e2e2e2;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header, nav, footer {
+    padding: 0.5rem;
+  }
+
+  .grid-container {
+    padding: 1rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
